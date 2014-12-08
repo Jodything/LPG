@@ -1,22 +1,24 @@
-<h1 style="text-align: center;">PAGE</h1>
+<h1 style="text-align: center;">NEW POST</h1>
 
 <section>
+  <div class="container">
 
-<%= form_for :article, url:aritcles_path do |f| %>
+    <%= form_for :article, url:articles_path do |f| %>
 
-  <paper-input-decorator label="Post Title" floatingLabel>
-    <%= f.text_field :title %>
-  </paper-input-decorator>
-  <paper-input-decorator label="Content" floatingLabel>
-    <paper-autogrow-textarea>
-      <%= f.text_area :text %>
-    </paper-autogrow-textarea>
-  </paper-input-decorator>
+      <paper-input-decorator label="Post Title" floatingLabel>
+        <%= f.text_field :title %>
+      </paper-input-decorator>
+      <paper-input-decorator label="Content" floatingLabel>
+        <paper-autogrow-textarea>
+          <%= f.text_area :text %>
+        </paper-autogrow-textarea>
+      </paper-input-decorator>
 
-  <paper-button raised>
-    <%= f.submit%>
-  </paper-button>
+      <paper-button raised>
+        <%= f.submit%>
+      </paper-button>
 
-  <% end %>
+      <% end %>
 
+  </div>
 </section>
