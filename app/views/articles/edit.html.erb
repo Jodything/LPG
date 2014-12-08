@@ -1,31 +1,5 @@
-<div class="container">
-  <%= form_for :article, url: article_path(@article), method: :patch do |f| %>
-    <% if @article.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
-      <ul>
-        <% @article.errors.full_messages.each do |msg| %>
-        <li>
-          <%= msg %>
-        </li>
-        <% end %>
-      </ul>
-    </div>
-    <% end %>
-
-    <paper-input-decorator label="Post Title" floatingLabel>
-      <%= f.text_field :title %>
-    </paper-input-decorator>
-
-    <paper-input-decorator label="Content" floatingLabel>
-      <paper-autogrow-textarea>
-        <%= f.text_area :text %>
-      </paper-autogrow-textarea>
-    </paper-input-decorator>
-
-    <paper-button raised class="colored">
-      <%= f.submit%>
-    </paper-button>
-
-  <% end %>
-</div>
+<section>
+  <div class="container">
+    <%= render 'form' %>
+  </div>
+</section>
