@@ -1,18 +1,17 @@
 <section>
   <div class="container">
     <h1 style="text-align:center;">News & Events</h1>
-  <div class="dialog">
 
     <%= @articles.each do |article| %>
-
+    <div class="dialog">
     <h3><%= article.title %></h3>
     <p> Submitted <%= time_ago_in_words(article.created_at) %></p>
 
     <%= link_to 'VIEW', article_path(article) %>
-
+    </div>
     <% end %>
 
-  </div>
+
   <paper-fab icon="create"><%= link_to '', new_article_path %></paper-fab>
   </div>
 </section>
