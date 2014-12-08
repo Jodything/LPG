@@ -7,7 +7,9 @@
     <h3><%= article.title %></h3>
     <p> Submitted <%= time_ago_in_words(article.created_at) %></p>
 
-    <%= link_to 'VIEW', article_path(article) %>
+    <paper-button raised class="colored">
+      <%= link_to 'VIEW', article_path(article) %>
+    </paper-button>
     </div>
     <% end %>
 

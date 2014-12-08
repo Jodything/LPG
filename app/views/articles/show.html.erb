@@ -1,12 +1,15 @@
 <div class="container">
 
-<h2>
-  <%= @article.title %>
-</h2>
-<p>
-  <%= @article.text %>
-</p>
-<paper-button class="hover">
-  <%= link_to "Edit", edit_article_path(@article) %>
-</paper-button>
+  <h2>
+    <%= @article.title %>
+  </h2>
+
+  <p>
+    <%= @article.text %>
+  </p>
+
+  <paper-button raised class="colored">
+    <%= link_to "Edit", edit_article_path(@article) %>
+  </paper-button>
+
 </div>
