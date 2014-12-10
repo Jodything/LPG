@@ -2,12 +2,19 @@
 
   <paper-tabs selected="0" class="bottom" self-end style="width: 300px;">
 
-    <paper-tab><%= link_to 'HOME', articles_path, :class => "p-tabs", "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
-    <paper-tab><%= link_to 'PAGE', new_article_path, :class => "p-tabs", "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
+    <paper-tab><%= link_to 'HOME', articles_path, :class => "p-tabs",
+      "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
+
+    <paper-tab><%= link_to 'PAGE', new_article_path, :class => "p-tabs",
+      "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
+
+    <paper-tab><%= link_to 'SIGN UP', new_user_registration_path, :class => "p-tabs",
+      "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
 
   </paper-tabs>
 
   <div class="bottom" flex></div>
+
 
   <paper-icon-button class="bottom" icon="account-circle"></paper-icon-button>
 

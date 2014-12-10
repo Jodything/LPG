@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.1.8'
+gem 'devise'
 gem 'omniauth-google-oauth2'
 gem 'bower-rails'
 gem 'emcee'

@@ -1,5 +1,4 @@
-<section>
-  <div class="container">
+
     <h1 style="text-align:center;">News & Events</h1>
 
     <%= @articles.each do |article| %>
@@ -15,11 +14,9 @@
       <core-icon icon="clear"></core-icon>
       <%= link_to 'Delete', article_path(article), :class=>"delete", method: :delete, data: { confirm: 'You are about to delete this post. Are you sure?'} %>
     </paper-button>
-    
+
     </div>
     <% end %>
 
 
   <paper-fab icon="create"><%= link_to '', new_article_path %></paper-fab>
-  </div>
-</section>
