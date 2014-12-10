@@ -8,8 +8,11 @@
     <paper-tab><%= link_to 'PAGE', new_article_path, :class => "p-tabs",
       "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
 
+    <paper-tab><%= link_to 'EVERYONE', welcome_index_path,:class => "p-tabs",
+    "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
+
     <% if user_signed_in? %>
-      <paper-tab><%= current_user.provider %></paper-tab>
+      <img style="border-radius: 50%; margin-left: 4em;" src="<%= current_user.avatar %>" alt="">
     <% else %>
       <paper-tab><%= link_to 'LOG IN', user_omniauth_authorize_path(:google_oauth2), :class => "p-tabs",
       "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>

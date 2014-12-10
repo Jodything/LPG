@@ -1,1 +1,13 @@
-<h1>Sup</h1>
+<div class="dialog">
+  <h1><%= current_user.name %></h1>
+  <img style="border-radius: 50%;" src="<%= current_user.avatar %>" alt="">
+  <p>
+    <%= current_user.email %>
+  </p>
+  <p>
+    <%= current_user.title %>
+  </p>
+  <p>
+    <%= current_user.company %>
+  </p>
+</div>
