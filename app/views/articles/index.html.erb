@@ -10,6 +10,12 @@
     <paper-button raised class="colored">
       <%= link_to 'VIEW', article_path(article) %>
     </paper-button>
+
+    <paper-button class="hover">
+      <core-icon icon="clear"></core-icon>
+      <%= link_to 'Delete', article_path(article), :class=>"delete", method: :delete, data: { confirm: 'You are about to delete this post. Are you sure?'} %>
+    </paper-button>
+    
     </div>
     <% end %>
 
