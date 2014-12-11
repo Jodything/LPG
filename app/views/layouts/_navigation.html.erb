@@ -16,9 +16,10 @@
         <paper-tab><%= link_to 'LOG OUT', destroy_user_session_path, :method => :delete, :class => "p-tabs",
           "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
         <div class="bottom" flex></div>
-        <!-- <paper-icon-button class="bottom" icon="<%= current_user.avatar %>"></paper-icon-button> -->
+
         <img class="bottom avatar" src="<%= current_user.avatar %>" alt="">
       </paper-tabs>
+      <paper-fab icon="create"><%= link_to 'A', new_article_path %></paper-fab>
     <% else %>
       </paper-tabs>
         <div class="bottom" flex></div>

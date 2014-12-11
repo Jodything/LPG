@@ -161,8 +161,10 @@ html /deep/ core-collapse {
 
 paper-fab {
   color: #fff;
-  float: right;
-  margin-top: 2em;
+  // float: right;
+  position: fixed;
+  top: 90%;
+  left: 92%;
   background: $teal;
 }
 
@@ -262,5 +264,5 @@ paper-button.blue-ripple::shadow #ripple {
 }
 
 .input_field {
-  color: $teal;
+  color: $charcoal;
 }
