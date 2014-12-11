@@ -13,4 +13,5 @@ Gems:
   * gem 'bower-rails'
   * gem 'emcee'
 
-https://pacific-shelf-7941.herokuapp.com
+Link to site:
+  https://pacific-shelf-7941.herokuapp.com
