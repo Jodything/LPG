@@ -29,7 +29,7 @@
       <paper-icon-button icon="menu" noink></paper-icon-button>
       <paper-dropdown class="dropdown">
         <core-menu class="menu">
-          <template repeat="{{pastries}}">
+          <template repeat="{{user_bubble}}">
             <paper-item>{{}}</paper-item>
           </template>
         </core-menu>
@@ -43,16 +43,9 @@
 
 scope = document.querySelector('template[is=auto-binding]');
 
-scope.pastries = [
-'Apple fritter',
-'Croissant',
-'Donut',
-'Financier',
-'Jello',
-'Madeleine',
-'Pound cake',
-'Pretzel',
-'Sfogliatelle'
+scope.user_bubble = [
+'Edit Profile',
+'Logout'
 ];
 
 </script>

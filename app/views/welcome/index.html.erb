@@ -2,12 +2,15 @@
   <h1><%= current_user.name %></h1>
   <img style="border-radius: 50%;" src="<%= current_user.avatar %>" alt="">
   <p>
+    <strong>email: </strong>
     <%= current_user.email %>
   </p>
-  <p>
+  <p style="float: left; margin-left: 2em;">
+    <strong>Title: </strong>
     <%= current_user.title %>
   </p>
-  <p>
+  <p style="float: right; margin-right: 2em;">
+    <strong>Company: </strong>
     <%= current_user.company %>
   </p>
 </div>
