@@ -1,16 +1,18 @@
+<!-- <%= @users.each do |user| %> --> 
 <div class="dialog">
-  <h1><%= current_user.name %></h1>
-  <img style="border-radius: 50%;" src="<%= current_user.avatar %>" alt="">
+  <h1><%= user.name %></h1>
+  <img style="border-radius: 50%;" src="<%= user.avatar %>" alt="">
   <p>
     <strong>email: </strong>
-    <%= current_user.email %>
+    <%= user.email %>
   </p>
   <p style="float: left; margin-left: 2em;">
     <strong>Title: </strong>
-    <%= current_user.title %>
+    <%= user.title %>
   </p>
   <p style="float: right; margin-right: 2em;">
     <strong>Company: </strong>
-    <%= current_user.company %>
+    <%= user.company %>
   </p>
 </div>
+<!-- <%end%> -->

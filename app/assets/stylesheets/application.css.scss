@@ -13,9 +13,205 @@
  *= require_tree .
  *= require_self
  */
+$charcoal: #333;
+$grey: #eee;
+$mocha: #211d1e;
+$gold: #DABA55;
+$light-gold: #EAD9A1;
 
+papertab a {
+  text-decoration: none;
+  color: $gold;
+}
 
 a {
   text-decoration: none;
-  color: yellow;
+  color: $charcoal;
+}
+
+//////////////////////////
+
+body {
+  font-family: 'Roboto', RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+  margin: 0;
+  background-color: $grey;
+  color: $charcoal;
+}
+
+body.core-narrow {
+  padding: 8px;
+}
+
+paper-tabs, core-toolbar {
+  background-color: $mocha;
+  color: #fff;
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+core-toolbar paper-tabs {
+  box-shadow: none;
+}
+
+paper-tabs[noink][nobar] paper-tab.core-selected {
+  color: $gold;
+}
+
+paper-tabs.transparent-teal {
+  background-color: transparent;
+  color: $mocha;
+  box-shadow: none;
+}
+
+paper-tabs.transparent-teal::shadow #selectionBar {
+  background-color: $mocha;
+}
+
+paper-tabs.transparent-teal paper-tab::shadow #ink {
+  color: $mocha;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.p-tabs {
+  text-decoration: none;
+  color: $gold;
+}
+
+
+// header//
+
+.content {
+  height: 2000px;
+  background: linear-gradient(rgb(214, 227, 231), lightblue);
+}
+
+.avatar {
+  border-radius: 50%;
+  margin-bottom: 1em;
+  margin-right: 0.5em;
+}
+
+//////////////////////////
+paper-item {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+html /deep/ core-collapse {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.constrained-height {
+  height: 150px;
+}
+
+.colored {
+  color: #0f9d58;
+}
+
+.dropdown.colored::shadow #ripple,
+.dropdown.colored::shadow #background {
+  border: 1px solid #0f9d58;
+  background-color: #b7e1cd;
+}
+
+////////////////////////////////////////
+
+.delete {
+  color: $charcoal;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+/* Card, Dialog */
+.dialog {
+  background-color: #fff;
+  margin: 1em;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 15em;
+  text-align: center;
+  vertical-align: top;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+}
+
+.dialog {
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.dialog > .content {
+  font-size: 0.9em;
+  padding-top: 5%;
+}
+
+.dialog > .content > .title {
+  font-size: 3em;
+}
+
+paper-fab {
+  color: #fff;
+  float: right;
+  margin-top: 2em;
+  background: #5766fc;
+}
+
+
+
+paper-input {
+  width: 80%;
+}
+
+paper-input-decorator {
+  max-width: 80%;
+}
+
+paper-input.narrow {
+  width: 150px;
+}
+
+//input area
+
+paper-autogrow-textarea {
+  textarea {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    resize: none;
+    /* see comments in template */
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+paper-button.colored {
+  color: $light-gold;
+}
+
+paper-button[raised].colored {
+  background: $light-gold;
+  color: #fff;
+}
+
+paper-button.custom > core-icon {
+  margin-right: 4px;
+}
+
+paper-button.hover:hover {
+  background: $grey;
+}
+
+paper-button.blue-ripple::shadow #ripple {
+  color: $light-gold;
 }
