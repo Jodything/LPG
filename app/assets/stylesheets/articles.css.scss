@@ -6,6 +6,9 @@
   color: #333;
 }
 
+body {
+  background-color: #eee;
+}
 
 .container {
   margin-left: auto;
@@ -14,6 +17,8 @@
 }
 /* Card, Dialog */
 .dialog {
+  background-color: #fff;
+  margin: 1em;
   position: relative;
   display: inline-block;
   width: 100%;

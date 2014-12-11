@@ -1,6 +1,7 @@
+
 <core-toolbar mode="waterfall-tall" class="tall">
 
-  <paper-tabs selected="0" class="bottom" self-end style="width: 300px;">
+  <paper-tabs selected="0" class="bottom" self-end >
 
     <paper-tab><%= link_to 'HOME', articles_path, :class => "p-tabs",
       "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
@@ -12,17 +13,47 @@
     "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
 
     <% if user_signed_in? %>
-      <img style="border-radius: 50%; margin-left: 4em;" src="<%= current_user.avatar %>" alt="">
+        <paper-tab><%= link_to 'LOG OUT', destroy_user_session_path, :method => :delete, :class => "p-tabs",
+          "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
+      </paper-tabs>
+
+        <div class="bottom"></div>
+        <paper-menu-button label="Colored">
+          <paper-icon-button icon="menu" class="colored"></paper-icon-button>
+          <paper-dropdown class="dropdown colored">
+            <core-menu class="menu">
+              <template repeat="{{pastries}}">
+                <paper-item>{{}}</paper-item>
+              </template>
+            </core-menu>
+          </paper-dropdown>
+        </paper-menu-button>
+        <img style="border-radius: 50%; padding-left: 0.5em;" src="<%= current_user.avatar %>" alt="">
     <% else %>
-      <paper-tab><%= link_to 'LOG IN', user_omniauth_authorize_path(:google_oauth2), :class => "p-tabs",
-      "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
+      </paper-tabs>
+        <div class="bottom" flex></div>
+        <paper-icon-button class="bottom" icon="account-circle"></paper-icon-button>
     <% end %>
 
-  </paper-tabs>
-
-  <div class="bottom" flex></div>
 
 
-  <paper-icon-button class="bottom" icon="account-circle"></paper-icon-button>
 
 </core-toolbar>
+
+<script>
+
+scope = document.querySelector('template[is=auto-binding]');
+
+scope.pastries = [
+'Apple fritter',
+'Croissant',
+'Donut',
+'Financier',
+'Jello',
+'Madeleine',
+'Pound cake',
+'Pretzel',
+'Sfogliatelle'
+];
+
+</script>
