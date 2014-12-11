@@ -1,7 +1,7 @@
 
 <h1 style="text-align:center;">News & Events</h1>
 
-<%= @articles.each do |article| %>
+<!-- <%= @articles.each do |article| %> -->
   <div class="dialog">
     <h3><strong><%= article.title %></strong></h3>
     <p> Submitted <%= time_ago_in_words(article.created_at) %></p>
@@ -16,7 +16,7 @@
   </paper-button>
 
   </div>
-<% end %>
+<!-- <% end %> -->
 
 
 <paper-fab icon="create"><%= link_to '', new_article_path %></paper-fab>
