@@ -1,28 +1,14 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+LPG intranet mockup.
+  - User base sign-in/register with google-oauth(omniauth) & devise
+  - News/Event postings (editable by AdminUser)
+  - Employee listing
+  - All in Google's Material Design with Polymer
 
-Things you may want to cover:
+Gems:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  * gem 'devise'
+  * gem 'omniauth-google-oauth2'
+  * gem 'bower-rails'
+  * gem 'emcee'
