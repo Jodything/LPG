@@ -18,6 +18,7 @@ $grey: #eee;
 $mocha: #211d1e;
 $gold: #DABA55;
 $light-gold: #EAD9A1;
+$teal: #80cbc4;
 
 papertab a {
   text-decoration: none;
@@ -111,12 +112,12 @@ html /deep/ core-collapse {
 }
 
 .colored {
-  color: #0f9d58;
+  color: $gold;
 }
 
 .dropdown.colored::shadow #ripple,
 .dropdown.colored::shadow #background {
-  border: 1px solid #0f9d58;
+  border: 1px solid $gold;
   background-color: #b7e1cd;
 }
 
@@ -162,7 +163,7 @@ paper-fab {
   color: #fff;
   float: right;
   margin-top: 2em;
-  background: #5766fc;
+  background: $teal;
 }
 
 
@@ -204,7 +205,7 @@ paper-button[raised].colored {
   color: #fff;
 }
 
-paper-button.custom > core-icon {
+paper-button.input_field > core-icon {
   margin-right: 4px;
 }
 
@@ -214,4 +215,52 @@ paper-button.hover:hover {
 
 paper-button.blue-ripple::shadow #ripple {
   color: $light-gold;
+}
+
+/////////////////////////
+.input_field /deep/ ::-webkit-input-placeholder {
+  color: $mocha;
+}
+
+.input_field /deep/ ::-moz-placeholder {
+  color: $mocha;
+}
+
+.input_field /deep/ :-ms-input-placeholder {
+  color: $mocha;
+}
+
+.input_field /deep/ .label-text,
+.input_field /deep/ .error {
+  color: $mocha;
+}
+
+.input_field /deep/ .unfocused-underline {
+  background-color: $mocha;
+}
+
+.input_field[focused] /deep/ .floated-label .label-text {
+  color: $gold;
+}
+
+.input_field /deep/ .focused-underline {
+  background-color: $gold;
+}
+
+.input_field /deep/ .cursor {
+  background-color: $teal;
+}
+
+.input_field.invalid /deep/ .floated-label .label-text,
+.input_field /deep/ .error {
+  color: #f06292;
+}
+
+.input_field.invalid /deep/ .focused-underline,
+.input_field.invalid /deep/ .cursor {
+  background-color: #f06292;
+}
+
+.input_field {
+  color: $teal;
 }

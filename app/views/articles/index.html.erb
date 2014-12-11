@@ -9,6 +9,7 @@
     <paper-button raised class="colored">
       <%= link_to 'VIEW', article_path(article) %>
     </paper-button>
+
   <% if current_user.admin? %>
     <paper-button class="hover">
       <core-icon icon="clear"></core-icon>
@@ -16,9 +17,9 @@
     </paper-button>
 
     <paper-button class="hover">
-    <core-icon icon="spellcheck"></core-icon>
-    <%= link_to 'EDIT', edit_article_path(article) %>
-  </paper-button>
+      <core-icon icon="spellcheck"></core-icon>
+      <%= link_to 'EDIT', edit_article_path(article) %>
+    </paper-button>
   <% end %>
 
 

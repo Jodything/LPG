@@ -13,11 +13,11 @@
     </div>
   <% end %>
 
-  <paper-input-decorator label="Post Title" floatingLabel>
+  <paper-input-decorator class="input_field" label="Post Title" floatingLabel>
     <%= f.text_field :title %>
   </paper-input-decorator>
 
-  <paper-input-decorator label="Content" floatingLabel>
+  <paper-input-decorator class="input_field" label="Content" floatingLabel>
     <paper-autogrow-textarea>
       <%= f.text_area :text %>
     </paper-autogrow-textarea>
