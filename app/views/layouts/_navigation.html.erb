@@ -15,30 +15,26 @@
     <% if user_signed_in? %>
         <paper-tab><%= link_to 'LOG OUT', destroy_user_session_path, :method => :delete, :class => "p-tabs",
           "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
-
-
         <div class="bottom" flex></div>
-
         <!-- <paper-icon-button class="bottom" icon="<%= current_user.avatar %>"></paper-icon-button> -->
         <img class="bottom avatar" src="<%= current_user.avatar %>" alt="">
       </paper-tabs>
-      <paper-menu-button>
-        <paper-icon-button icon="menu" noink></paper-icon-button>
-        <paper-dropdown class="dropdown">
-          <core-menu class="menu">
-            <template repeat="{{pastries}}">
-              <paper-item>{{}}</paper-item>
-            </template>
-          </core-menu>
-        </paper-dropdown>
-      </paper-menu-button>
     <% else %>
       </paper-tabs>
         <div class="bottom" flex></div>
         <paper-icon-button class="bottom" icon="account-circle"></paper-icon-button>
     <% end %>
 
-
+    <paper-menu-button>
+      <paper-icon-button icon="menu" noink></paper-icon-button>
+      <paper-dropdown class="dropdown">
+        <core-menu class="menu">
+          <template repeat="{{pastries}}">
+            <paper-item>{{}}</paper-item>
+          </template>
+        </core-menu>
+      </paper-dropdown>
+    </paper-menu-button>
 
 
 </core-toolbar>

@@ -12,3 +12,5 @@ Gems:
   * gem 'omniauth-google-oauth2'
   * gem 'bower-rails'
   * gem 'emcee'
+
+https://pacific-shelf-7941.herokuapp.com
