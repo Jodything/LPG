@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+ @imoprt 'forem/base';
+
 $charcoal: #333;
 $grey: #eee;
 $mocha: #211d1e;

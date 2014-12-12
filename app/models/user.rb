@@ -36,4 +36,10 @@ class User < ActiveRecord::Base
       super
     end
   end
+
+  def forem_name
+    email
+  end
+
+
 end

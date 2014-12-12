@@ -3,17 +3,17 @@
 
   <paper-tabs selected="0" class="bottom fit" self-end >
 
-    <paper-tab><%= link_to 'HOME', articles_path, :class => "p-tabs",
+    <paper-tab><%= link_to 'HOME', main_app.articles_path, :class => "p-tabs",
       "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
 
-    <paper-tab><%= link_to 'PAGE', new_article_path, :class => "p-tabs",
+    <paper-tab><%= link_to 'PAGE', main_app.new_article_path, :class => "p-tabs",
       "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
 
-    <paper-tab><%= link_to 'EVERYONE', welcome_index_path,:class => "p-tabs",
+    <paper-tab><%= link_to 'EVERYONE', main_app.welcome_index_path,:class => "p-tabs",
     "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
 
     <% if user_signed_in? %>
-        <paper-tab><%= link_to 'LOG OUT', destroy_user_session_path, :method => :delete, :class => "p-tabs",
+        <paper-tab><%= link_to 'LOG OUT', main_app.destroy_user_session_path, :method => :delete, :class => "p-tabs",
           "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
       </paper-tabs>
 
