@@ -91,9 +91,6 @@ h3 {
 
 .avatar {
   border-radius: 50%;
-  // position: fixed;
-  // top: 2%;
-  // left: 92%;
 }
 
 //////////////////////////
@@ -265,4 +262,46 @@ paper-button.blue-ripple::shadow #ripple {
 
 .input_field {
   color: $charcoal;
+}
+
+
+
+
+
+
+
+
+//BUtton
+.ripple {
+  background: rgba(0,0,0,0.5);
+}
+
+$btn-primary: #4285f4;
+$btn-primary-text: #FFFFFF;
+
+
+.btn {
+  display: inline-block;
+  padding: 1.5em 1.5em;
+  font-size: .90em;
+  margin-top: 2em;
+
+  cursor: pointer;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 13px 0 rgba(0, 0, 0, 0.24);
+
+
+  &:active {
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.23), 3px 8px 20px 0 rgba(0, 0, 0, 0.18), -3px 8px 20px 0 rgba(0, 0, 0, 0.18);
+  }
+
+  &.btn-primary {
+    background: $light-gold;
+    color: $charcoal;
+  }
 }
