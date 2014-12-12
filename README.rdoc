@@ -15,3 +15,10 @@ Gems:
 
 Link to site:
   https://pacific-shelf-7941.herokuapp.com
+
+To get the app going:
+  - Will need to setup google developer account and get GOOGLE_CLIENT_SECRET
+    & GOOGLE_CLIENT_ID
+  - bundle install
+  - rake db:migrate
+  -then youre good to go
