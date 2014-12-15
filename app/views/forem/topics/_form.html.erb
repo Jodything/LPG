@@ -1,9 +1,11 @@
 <%= simple_form_for [forem, @forum, @topic] do |f| %>
+<paper-input-decorator class="input_field" label="Title" floatingLabel>
   <%= f.input :subject %>
+</paper-input-decorator>
 
   <%= f.simple_fields_for :posts do |post| %>
     <%= render :partial => "forem/posts/form", :locals => { :f => post }%>
   <% end %>
-  
+
   <%= f.submit :class => "btn btn-primary" %>
 <% end %>
