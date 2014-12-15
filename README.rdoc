@@ -21,4 +21,5 @@ To get the app going:
     & GOOGLE_CLIENT_ID
   - bundle install
   - rake db:migrate
+  - for the forum run: rails g forem:install
   -then youre good to go
