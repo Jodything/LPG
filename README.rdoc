@@ -22,4 +22,5 @@ To get the app going:
   - bundle install
   - rake db:migrate
   - for the forum run: rails g forem:install
+  - for the cms run: rails g comfy:cms
   -then youre good to go
