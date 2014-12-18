@@ -16,6 +16,14 @@
 
  @import 'forem/base';
 
+ .logo {
+   margin-top: 1em;
+   display-inline: block;
+   width: 15%;
+   height: auto;
+ }
+
+
 $charcoal: #333;
 $grey: #eee;
 $mocha: #211d1e;

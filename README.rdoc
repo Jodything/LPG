@@ -21,6 +21,8 @@ To get the app going:
     & GOOGLE_CLIENT_ID
   - bundle install
   - rake db:migrate
+  - for polymer/bower/material design(emcee gem) run: rails g emcee:install
+    - any new polymer/material design elements go in app/assets/components
   - for the forum run: rails g forem:install
   - for the cms run: rails g comfy:cms
   -then youre good to go

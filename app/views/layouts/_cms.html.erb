@@ -1,0 +1,3 @@
+<% @cms_site.pages.root.children.published.each. do |page| %>
+  <%= link_to page.label, page.full_path %>
+<%end%>
