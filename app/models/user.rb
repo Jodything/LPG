@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
       user.name = auth.info.name
       user.email = auth.info.email
       user.avatar = auth.info.image
+      user.company = user.email.split('@').last
     end
   end
 
