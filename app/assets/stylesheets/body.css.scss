@@ -1,3 +1,64 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$charcoal: #333;
+$grey: #eee;
+$mocha: #211d1e;
+$gold: #DABA55;
+$light-gold: #EAD9A1;
+$teal: #80cbc4;
+
+////*Body CSS*////
+body {
+  font-family: 'Roboto', RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+  margin: 0;
+  background-color: $grey;
+  color: $charcoal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-touch-callout: none;
+}
+
+body.core-narrow {
+  padding: 8px;
+}
+
+////* Universal Anchor tag css*////
+a {
+  text-decoration: none;
+  color: $charcoal;
+}
+
+////* Universal Header tags CSS*////
+h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+/* Card, Dialog */
+.dialog {
+  background-color: #fff;
+  margin: 1em;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 15em;
+  text-align: center;
+  vertical-align: top;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+  box-sizing: border-box;
+  padding: 16px;
+  > .content{
+    font-size: 0.9em;
+    padding-top: 5%;
+    > .title {
+      font-size: 3em;
+    }
+  }
+}
+
+.content {
+  height: 2000px;
+  background: linear-gradient(rgb(214, 227, 231), lightblue);
+}

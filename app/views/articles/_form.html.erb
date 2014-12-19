@@ -1,3 +1,5 @@
+<%= render 'layouts/autogrow_textarea' %>
+
 <%= form_for @article do |f| %>
 
   <% if @article.errors.any? %>
@@ -23,8 +25,7 @@
     </paper-autogrow-textarea>
   </paper-input-decorator>
 
-  <!-- <paper-button raised class="colored"> -->
     <%= f.submit "SUBMIT", :class => 'btn btn-primary'%>
-  <!-- </paper-button> -->
+
 
 <% end %>

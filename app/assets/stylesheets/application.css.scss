@@ -16,13 +16,6 @@
 
  @import 'forem/base';
 
- .logo {
-   margin-top: 1em;
-   display-inline: block;
-   width: 15%;
-   height: auto;
- }
-
 
 $charcoal: #333;
 $grey: #eee;
@@ -36,23 +29,13 @@ papertab a {
   color: $gold;
 }
 
-a {
-  text-decoration: none;
-  color: $charcoal;
-}
+
 
 //////////////////////////
 
-body {
-  font-family: 'Roboto', RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
-  margin: 0;
-  background-color: $grey;
-  color: $charcoal;
-}
 
-body.core-narrow {
-  padding: 8px;
-}
+
+
 
 paper-tabs, core-toolbar {
   background-color: $mocha;
@@ -82,11 +65,6 @@ paper-tabs.transparent-teal paper-tab::shadow #ink {
   color: $mocha;
 }
 
-h3 {
-  font-size: 16px;
-  font-weight: 400;
-}
-
 .p-tabs {
   text-decoration: none;
   color: $gold;
@@ -95,10 +73,7 @@ h3 {
 
 // header//
 
-.content {
-  height: 2000px;
-  background: linear-gradient(rgb(214, 227, 231), lightblue);
-}
+
 
 .avatar {
   border-radius: 50%;
@@ -141,32 +116,7 @@ html /deep/ core-collapse {
   margin-right: auto;
   width: 75%;
 }
-/* Card, Dialog */
-.dialog {
-  background-color: #fff;
-  margin: 1em;
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  height: 15em;
-  text-align: center;
-  vertical-align: top;
-  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
-}
 
-.dialog {
-  box-sizing: border-box;
-  padding: 16px;
-}
-
-.dialog > .content {
-  font-size: 0.9em;
-  padding-top: 5%;
-}
-
-.dialog > .content > .title {
-  font-size: 3em;
-}
 
 paper-fab {
   color: #fff;
@@ -178,32 +128,7 @@ paper-fab {
 
 
 
-paper-input {
-  width: 80%;
-}
 
-paper-input-decorator {
-  max-width: 80%;
-}
-
-paper-input.narrow {
-  width: 150px;
-}
-
-//input area
-
-paper-autogrow-textarea {
-  textarea {
-    padding: 0;
-    margin: 0;
-    border: none;
-    outline: none;
-    resize: none;
-    /* see comments in template */
-    width: 100%;
-    height: 100%;
-  }
-}
 
 
 paper-button.colored {
@@ -228,52 +153,6 @@ paper-button.blue-ripple::shadow #ripple {
 }
 
 /////////////////////////
-.input_field /deep/ ::-webkit-input-placeholder {
-  color: $mocha;
-}
-
-.input_field /deep/ ::-moz-placeholder {
-  color: $mocha;
-}
-
-.input_field /deep/ :-ms-input-placeholder {
-  color: $mocha;
-}
-
-.input_field /deep/ .label-text,
-.input_field /deep/ .error {
-  color: $mocha;
-}
-
-.input_field /deep/ .unfocused-underline {
-  background-color: $mocha;
-}
-
-.input_field[focused] /deep/ .floated-label .label-text {
-  color: $gold;
-}
-
-.input_field /deep/ .focused-underline {
-  background-color: $gold;
-}
-
-.input_field /deep/ .cursor {
-  background-color: $teal;
-}
-
-.input_field.invalid /deep/ .floated-label .label-text,
-.input_field /deep/ .error {
-  color: #f06292;
-}
-
-.input_field.invalid /deep/ .focused-underline,
-.input_field.invalid /deep/ .cursor {
-  background-color: #f06292;
-}
-
-.input_field {
-  color: $charcoal;
-}
 
 
 
@@ -285,34 +164,4 @@ paper-button.blue-ripple::shadow #ripple {
 //BUtton
 .ripple {
   background: rgba(0,0,0,0.5);
-}
-
-$btn-primary: #4285f4;
-$btn-primary-text: #FFFFFF;
-
-
-.btn {
-  display: inline-block;
-  padding: 1.5em 1.5em;
-  font-size: .90em;
-  margin-top: 2em;
-
-  cursor: pointer;
-  border-radius: 4px;
-  text-transform: uppercase;
-  text-decoration: none;
-
-  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 13px 0 rgba(0, 0, 0, 0.24);
-
-
-  &:active {
-    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.23), 3px 8px 20px 0 rgba(0, 0, 0, 0.18), -3px 8px 20px 0 rgba(0, 0, 0, 0.18);
-  }
-
-  &.btn-primary {
-    background: $light-gold;
-    color: $charcoal;
-  }
 }

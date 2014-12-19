@@ -1,0 +1,85 @@
+// Place all the styles related to the company_info controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$charcoal: #333;
+$grey: #eee;
+$mocha: #211d1e;
+$gold: #DABA55;
+$light-gold: #EAD9A1;
+$teal: #80cbc4;
+$btn-primary-text: #FFFFFF;
+
+////* Form Input Fields*////
+paper-input.narrow {
+  width: 150px;
+}
+
+// Input text color
+.input_field {
+  color: $charcoal;
+}
+
+.input_field /deep/ ::-webkit-input-placeholder {
+  color: $mocha;
+}
+
+.input_field /deep/ ::-moz-placeholder {
+  color: $mocha;
+}
+
+.input_field /deep/ :-ms-input-placeholder {
+  color: $mocha;
+}
+
+.input_field /deep/ .label-text,
+.input_field /deep/ .error {
+  color: $mocha;
+}
+
+.input_field /deep/ .unfocused-underline {
+  background-color: $mocha;
+}
+
+// Input field line colors
+.input_field[focused] /deep/ .floated-label .label-text {
+  color: $gold;
+}
+
+.input_field /deep/ .focused-underline {
+  background-color: $gold;
+}
+
+// Input flash cursor
+.input_field /deep/ .cursor {
+  background-color: $teal;
+}
+
+
+
+////* Form Field Buttons*////
+.btn {
+  display: inline-block;
+  padding: 1.5em 1.5em;
+  font-size: .90em;
+  margin-top: 2em;
+
+  cursor: pointer;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 13px 0 rgba(0, 0, 0, 0.24);
+
+
+  &:active {
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.23), 3px 8px 20px 0 rgba(0, 0, 0, 0.18), -3px 8px 20px 0 rgba(0, 0, 0, 0.18);
+  }
+
+  &.btn-primary {
+    background: $light-gold;
+    color: $charcoal;
+  }
+}
