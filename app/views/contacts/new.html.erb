@@ -1,6 +1,6 @@
 <%= render 'layouts/autogrow_textarea' %>
 
-  <h2>Share your thoughts/ideas/concerns with us.</h2>
+  <h2 style="text-align:center;">Share your thoughts/ideas/concerns with us.</h2>
 
 <%= form_for @contact do |f| %>
 
@@ -18,13 +18,13 @@
       <%= f.text_area :message, :as => :text, :required => true %>
     </paper-autogrow-textarea>
   </paper-input-decorator>
-  
+
 
   <div style="display:none;">
     <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
   </div>
 
-  <div>
+  <div style="text-align:center;">
   </br>
   <%= f.submit 'Send', :class=> "btn btn-primary" %>
 </div>
