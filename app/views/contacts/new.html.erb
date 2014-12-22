@@ -1,20 +1,24 @@
+<%= render 'layouts/autogrow_textarea' %>
 
   <h2>Share your thoughts/ideas/concerns with us.</h2>
 
-  <%= form_for @contact do |f| %>
+<%= form_for @contact do |f| %>
 
   <paper-input-decorator class="input_field" label="Name" floatingLabel>
-    <%= f.text_field :name %></paper-input-decorator>
+    <%= f.text_field :name %>
+  </paper-input-decorator>
 
   <paper-input-decorator class="input_field" label="Email" floatingLabel>
-    <%= f.text_field :email, :required => true %></paper-input-decorator>
+    <%= f.text_field :email, :required => true %>
+  </paper-input-decorator>
 
-  <%= render 'layouts/autogrow_textarea' %>
+
   <paper-input-decorator class="input_field" label="Message" floatingLabel>
-    <paper-auto-grow-textarea>
+    <paper-autogrow-textarea>
       <%= f.text_area :message, :as => :text, :required => true %>
-    </paper-auto-grow-textarea>
-</paper-input-decorator>
+    </paper-autogrow-textarea>
+  </paper-input-decorator>
+  
 
   <div style="display:none;">
     <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
