@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
+
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
   resources :articles
   get 'welcome/index'
