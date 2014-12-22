@@ -16,18 +16,15 @@
 
  @import 'forem/base';
 
+ $charcoal: #333;
+ $grey: #eee;
+ $mocha: #211d1e;
+ $gold: #DABA55;
+ $light-gold: #EAD9A1;
+ $teal: #80cbc4;
 
-$charcoal: #333;
-$grey: #eee;
-$mocha: #211d1e;
-$gold: #DABA55;
-$light-gold: #EAD9A1;
-$teal: #80cbc4;
 
-papertab a {
-  text-decoration: none;
-  color: $gold;
-}
+
 
 
 
@@ -37,47 +34,14 @@ papertab a {
 
 
 
-paper-tabs, core-toolbar {
-  background-color: $mocha;
-  color: #fff;
-  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
-}
 
-core-toolbar paper-tabs {
-  box-shadow: none;
-}
-
-paper-tabs[noink][nobar] paper-tab.core-selected {
-  color: $gold;
-}
-
-paper-tabs.transparent-teal {
-  background-color: transparent;
-  color: $mocha;
-  box-shadow: none;
-}
-
-paper-tabs.transparent-teal::shadow #selectionBar {
-  background-color: $mocha;
-}
-
-paper-tabs.transparent-teal paper-tab::shadow #ink {
-  color: $mocha;
-}
-
-.p-tabs {
-  text-decoration: none;
-  color: $gold;
-}
 
 
 // header//
 
 
 
-.avatar {
-  border-radius: 50%;
-}
+
 
 //////////////////////////
 paper-item {

@@ -1,24 +1,6 @@
-<polymer-element name="x-trigger" extends="paper-icon-button" relative on-tap="{{toggle}}" noink>
-  <template>
-    <shadow></shadow>
-    <content></content>
-  </template>
-  <script>
-  Polymer({
-    toggle: function() {
-      if (!this.dropdown) {
-        this.dropdown = this.querySelector('paper-dropdown');
-      }
-      this.dropdown && this.dropdown.toggle();
-    }
-  });
-  </script>
-</polymer-element>
-
-
 <core-toolbar class="tall">
 
-  <paper-tabs selected="0" class="bottom fit" self-end >
+  <paper-tabs selected="0" class="bottom fit tab-color" self-end horizontal center layout>
 
     <paper-tab><%= link_to 'HOME', root_path, :class => "p-tabs",
       "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
@@ -29,8 +11,8 @@
     <paper-tab><%= link_to 'EVERYONE', main_app.welcome_index_path,:class => "p-tabs",
     "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
 
-    <paper-tab><%= link_to 'LPG INFO', main_app.comfy_cms_render_page_path,:class => "p-tabs",
-    "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
+    <!-- <paper-tab><%= link_to 'LPG INFO', main_app.comfy_cms_render_page_path,:class => "p-tabs",
+    "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab> -->
 
 
 
@@ -46,26 +28,7 @@
           "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
       </paper-tabs>
 
-      <!-- <paper-menu-button>
-        <paper-icon-button icon="menu" noink></paper-icon-button>
-        <paper-dropdown class="dropdown">
-          <core-menu class="menu">
-            <template repeat="{{}}">
-              <paper-item>{{}}</paper-item>
-            </template>
-          </core-menu>
-        </paper-dropdown>
-      </paper-menu-button> -->
 
-      <x-trigger icon="apps">
-        <paper-dropdown class="no-padding">
-          <div class="menu">
-            <paper-item>Item 1</paper-item>
-            <paper-item>Item 2</paper-item>
-            <paper-item>Item 3</paper-item>
-          </div>
-        </paper-dropdown>
-      </x-trigger>
 
       <div flex>
         <!-- <%= link_to (image_tag "LPG.png"), :class => "logo"%> -->

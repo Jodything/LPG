@@ -1,0 +1,4 @@
+<% Comfy::Cms::Site.first.pages.root.children.published.each do |page| %>
+<p><%= link_to page.label.upcase, page.full_path, :class => "p-tabs",
+"horizontal"=>"", "center-center"=>"", "layout"=>"" %></p>
+<% end %>
