@@ -26,11 +26,11 @@ core-toolbar paper-tabs {
 }
 
 paper-tabs.tab-color::shadow #selectionBar {
-  background-color: $light-gold;
+  background-color: $teal;
 }
 
 paper-tabs.tab-color paper-tab::shadow #ink {
-  color: $teal;
+  color: $light-gold;
 }
 
 .avatar {
