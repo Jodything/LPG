@@ -14,6 +14,12 @@
     <paper-tab><%= link_to 'CONTACT US', main_app.new_contact_path,:class => "p-tabs",
     "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
 
+    <paper-tab><%= link_to 'PERKS', '#',:class => "p-tabs",
+    "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
+
+    <paper-tab><%= link_to 'BENEFITS', '#',:class => "p-tabs",
+    "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
+
 
 
       <% Comfy::Cms::Site.first.pages.root.children.published.each do |page| %>
@@ -24,11 +30,7 @@
 
 
     <% if user_signed_in? %>
-        <paper-tab><%= link_to 'LOG OUT', main_app.destroy_user_session_path, :method => :delete, :class => "p-tabs",
-          "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
       </paper-tabs>
-
-
 
       <div flex>
         <!-- <%= link_to (image_tag "LPG.png"), :class => "logo"%> -->
@@ -36,7 +38,11 @@
       </div>
 
       <span flex></span>
-      <img class=" avatar" src="<%= current_user.avatar %>" alt="">
+      <%= link_to(main_app.destroy_user_session_path, :method => :delete) do %>
+        <img class=" avatar" src="<%= current_user.avatar %>" alt="">
+      <%end%>
+
+
 
 
     <% else %>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   match '/contacts',     to: 'contacts#new',             via: 'get'
   resources "contacts", only: [:new, :create]
 
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
 	mount Forem::Engine, :at => '/forums'
 
   comfy_route :cms_admin, :path => '/admin'
+  
 
   # Make sure this routeset is defined last
   comfy_route :cms, :path => '/', :sitemap => true
