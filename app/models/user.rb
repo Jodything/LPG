@@ -38,8 +38,12 @@ class User < ActiveRecord::Base
     end
   end
 
+#field for forem(Forum)
   def forem_name
     name
+  end
+  def forem_email
+    email
   end
 
 

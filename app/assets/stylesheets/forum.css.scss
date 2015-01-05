@@ -1,0 +1,131 @@
+// Place all the styles related to the omniauth_callbacks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$charcoal: #333;
+$grey: #eee;
+$mocha: #211d1e;
+$gold: #DABA55;
+$light-gold: #EAD9A1;
+$teal: #80cbc4;
+
+.forum .title {
+  font-size: 25px;
+}
+
+.forums thead th {
+  background: $teal;
+  color: white;
+  padding: 10px;
+  // border-bottom: 3px solid $light-gold;
+  font-size: 110%;
+}
+
+.forums .last_post {
+  font-style: italic;
+
+  time {
+    color: #aaa;
+    font-size: 75%;
+  }
+}
+
+#forum #forum_topic_links {
+  margin-bottom: 10px;
+}
+
+/////
+
+.post {
+  border: 1px solid #dedede;
+  margin-bottom: 10px;
+  border-radius: 5px;
+
+  .alert {
+    margin: 10px;
+  }
+
+  .contents {
+    border-left: 1px solid #ddd;
+    padding-left: 10px;
+    padding-bottom: 10px;
+
+    time {
+      font-size: 75%;
+      font-style: italic;
+    }
+  }
+
+  .in-reply-to {
+    font-size: 85%;
+  }
+}
+
+.new_post textarea {
+  width: 50%;
+  min-height: 250px;
+}
+
+
+
+
+/////
+
+.topics thead th {
+  background: $teal;
+  color: white;
+  padding: 5px;
+  border-bottom: 3px solid #232323;
+  font-size: 110%;
+}
+
+.topic td.byline {
+  padding: 10px;
+}
+
+.topic .subject {
+  font-size: 20px;
+}
+
+.new_topic textarea {
+  width: 50%;
+  min-height: 250px;
+}
+
+#topic #menu {
+  margin-bottom: 10px;
+}
+
+
+//////
+#groups thead th {
+  background: $light-gold;
+  color: white;
+  padding: 10px;
+  border-bottom: 3px solid #232323;
+  font-size: 110%;
+}
+
+/////
+td {
+  padding: 1em 1em;
+  // border-bottom: 0.5em solid $grey;
+  border-top: 0.5em solid $grey;
+}
+
+
+.topics-count, .views-count, .posts-count {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+tbody {
+  background-color: white;
+}
+
+.category h2 {
+  text-align: center;
+}
