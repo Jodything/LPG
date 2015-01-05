@@ -1,0 +1,26 @@
+<h1>Blog Post</h1>
+<h1>
+  <%= @post.title %>
+</h1>
+<div class="author">
+  <%= @post.author %>
+</div>
+<div class="date">
+  <%= @post.published_at.to_s(:db) %>
+</div>
+<div class="content">
+  <%= @post.content.html_safe %>
+</div>
+<div class="comments">
+  <% @post.comments.published.each do |comment| %>
+    <div class="comment">
+      <div class="author">
+        <%= comment.author %>
+      </div>
+      <div class="content">
+        <%= comment.content %>
+      </div>
+    </div>
+  <% end %>
+  <%= render :partial => 'comfy/blog/comments/form' %>
+</div>

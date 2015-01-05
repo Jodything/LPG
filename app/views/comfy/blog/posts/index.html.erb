@@ -1,0 +1,17 @@
+<h1 style="text-align:center;">News & Events</h1>
+
+<!-- <%= @posts.each do |post| %> -->
+  <h1>
+    <%= link_to post.title, comfy_blog_post_path(@cms_site.path, @blog.path, post.slug) %>
+  </h1>
+  <div class="author">
+    <%= post.author %>
+  </div>
+  <div class="date">
+    <%= time_ago_in_words(post.published_at) %>
+  </div>
+  <div class="content">
+    <%= post.content.html_safe %>
+  </div>
+<!-- <% end %> -->
+<%= paginate @posts %>

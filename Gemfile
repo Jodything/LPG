@@ -39,6 +39,7 @@ gem 'forem-redcarpet', github: "radar/forem-redcarpet"
 
 # For CMS
 gem 'comfortable_mexican_sofa', '~> 1.12.0'
+gem 'comfy_blog'
 
 gem 'mail_form'
 gem 'simple_form'

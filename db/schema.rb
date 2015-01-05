@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141216210241) do
+ActiveRecord::Schema.define(version: 20150105213421) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -19,6 +19,80 @@ ActiveRecord::Schema.define(version: 20141216210241) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "cms_fortress_role_details", force: true do |t|
+    t.string   "name"
+    t.string   "command"
+    t.boolean  "can_create"
+    t.boolean  "can_update"
+    t.boolean  "can_delete"
+    t.boolean  "can_view"
+    t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "site_id"
+  end
+
+  create_table "cms_fortress_roles", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "site_id"
+  end
+
+  create_table "cms_page_workflows", force: true do |t|
+    t.integer  "cms_page_id"
+    t.integer  "status_id"
+    t.date     "published_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "site_id"
+  end
+
+  create_table "comfy_blog_comments", force: true do |t|
+    t.integer  "post_id",                      null: false
+    t.string   "author",                       null: false
+    t.string   "email",                        null: false
+    t.text     "content"
+    t.boolean  "is_published", default: false, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comfy_blog_comments", ["post_id", "created_at"], name: "index_comfy_blog_comments_on_post_id_and_created_at"
+  add_index "comfy_blog_comments", ["post_id", "is_published", "created_at"], name: "index_blog_comments_on_post_published_created"
+
+  create_table "comfy_blog_posts", force: true do |t|
+    t.integer  "blog_id",                                  null: false
+    t.string   "title",                                    null: false
+    t.string   "slug",                                     null: false
+    t.text     "content"
+    t.string   "excerpt",      limit: 1024
+    t.string   "author"
+    t.integer  "year",         limit: 4,                   null: false
+    t.integer  "month",        limit: 2,                   null: false
+    t.boolean  "is_published",              default: true, null: false
+    t.datetime "published_at",                             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comfy_blog_posts", ["created_at"], name: "index_comfy_blog_posts_on_created_at"
+  add_index "comfy_blog_posts", ["is_published", "created_at"], name: "index_comfy_blog_posts_on_is_published_and_created_at"
+  add_index "comfy_blog_posts", ["is_published", "year", "month", "slug"], name: "index_blog_posts_on_published_year_month_slug"
+
+  create_table "comfy_blogs", force: true do |t|
+    t.integer "site_id",                             null: false
+    t.string  "label",                               null: false
+    t.string  "identifier",                          null: false
+    t.string  "app_layout",  default: "application", null: false
+    t.string  "path"
+    t.text    "description"
+  end
+
+  add_index "comfy_blogs", ["identifier"], name: "index_comfy_blogs_on_identifier"
+  add_index "comfy_blogs", ["site_id", "path"], name: "index_comfy_blogs_on_site_id_and_path"
 
   create_table "comfy_cms_blocks", force: true do |t|
     t.string   "identifier",                      null: false
@@ -99,6 +173,9 @@ ActiveRecord::Schema.define(version: 20141216210241) do
     t.boolean  "is_shared",                       default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "cached_timeout",                  default: 0
+    t.string   "aasm_state",                      default: "new"
+    t.date     "published_date"
   end
 
   add_index "comfy_cms_pages", ["parent_id", "position"], name: "index_comfy_cms_pages_on_parent_id_and_position"
@@ -272,12 +349,9 @@ ActiveRecord::Schema.define(version: 20141216210241) do
     t.boolean  "forem_admin",            default: false
     t.string   "forem_state",            default: "pending_review"
     t.boolean  "forem_auto_subscribe",   default: false
-    t.integer  "storytime_role_id"
-    t.string   "storytime_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  add_index "users", ["storytime_role_id"], name: "index_users_on_storytime_role_id"
 
 end
