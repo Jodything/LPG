@@ -19,20 +19,21 @@
 
     <div class='contents'>
       <div class='user col-md-2'>
+        <div class='icon'><img class=" avatar" src="<%= post.user.avatar %>" alt=""></div>
         <div class='username'>
           <% if post.user.is_a?(Forem::NilUser) %>
             <%= t(:deleted) %>
           <% else %>
             <%= link_to_if Forem.user_profile_links, post.user.forem_name, [main_app, post.user] %>
-          <% end %>
+          <% end %></br>
+          <a href='#post-<%= post.id %>'>
+            <%= post_time_tag(post) %>
+          </a>
         </div>
-        <div class='icon'><img class=" avatar" src="<%= post.user.avatar %>" alt=""></div>
       </div>
 
-      <div class='contents col-md-7'>
-        <a href='#post-<%= post.id %>'>
-          <%= post_time_tag(post) %>
-        </a>
+      <div class='col-md-7'>
+
         <%= forem_format(post.text) %>
 
         <% if post.reply_to %>

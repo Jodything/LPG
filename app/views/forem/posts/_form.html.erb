@@ -1,5 +1,5 @@
 <paper-input-decorator class="input_field" label="Content" floatingLabel>
-  <%= f.input :text, :input_html => { :class => "field col-md-12" } %>
+  <%= f.input :text, label: '&nbsp;'.html_safe %>
 </paper-input-decorator>
 
 <% if params[:reply_to_id] %>
