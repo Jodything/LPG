@@ -14,13 +14,6 @@
     <paper-tab><%= link_to 'CONTACT US', main_app.new_contact_path,:class => "p-tabs",
     "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
 
-    <paper-tab><%= link_to 'PERKS', '#',:class => "p-tabs",
-    "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
-
-    <paper-tab><%= link_to 'BENEFITS', '#',:class => "p-tabs",
-    "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
-
-
 
       <% Comfy::Cms::Site.first.pages.root.children.published.each do |page| %>
       <paper-tab><%= link_to page.label.upcase, page.full_path, :class => "p-tabs",
