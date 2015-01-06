@@ -1,14 +1,10 @@
 <h1>Blog Post</h1>
-<h1>
-  <%= @post.title %>
-</h1>
-<div class="author">
-  <%= @post.author %>
-</div>
-<div class="date">
-  <%= @post.published_at.to_s(:db) %>
-</div>
 <div class="content">
+  <h1>
+    <%= @post.title %>
+  </h1>
+  <%= @post.author %>
+  <%= @post.published_at.to_s(:db) %>
   <%= @post.content.html_safe %>
 </div>
 <div class="comments">
