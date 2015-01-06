@@ -138,6 +138,10 @@ tbody, .contents {
   clear: right;
 }
 
-.user {
+
+.odd .user {
   background: linear-gradient(90deg, $light-gold, white);
+}
+.even .user {
+  background: linear-gradient(90deg, white, $teal);
 }
