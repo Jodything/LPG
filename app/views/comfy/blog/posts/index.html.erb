@@ -5,9 +5,11 @@
   <h1>
     <%= link_to post.title, comfy_blog_post_path(@cms_site.path, @blog.path, post.slug) %>
   </h1>
-  <%= post.author %>
-  <%= time_ago_in_words(post.published_at) %>
-  <%= post.content.html_safe %>
+  <%= post.author %> |
+  <%= time_ago_in_words(post.published_at) %> ago.</br>
+  <p>
+    <%= post.excerpt.html_safe %>
+  </p>
 </div>
 <!-- <% end %> -->
 <%= paginate @posts %>

@@ -3,10 +3,11 @@
   <h1>
     <%= @post.title %>
   </h1>
-  <%= @post.author %>
+  <%= @post.author %> |
   <%= @post.published_at.to_s(:db) %>
   <%= @post.content.html_safe %>
 </div>
+
 <div class="comments">
   <% @post.comments.published.each do |comment| %>
     <div class="comment">
