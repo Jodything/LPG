@@ -1,9 +1,6 @@
 <core-toolbar class="tall">
 
-  <paper-tabs selected="0" class="bottom fit tab-color" self-end horizontal center layout>
-
-    <paper-tab><%= link_to 'HOME', root_path, :class => "p-tabs",
-      "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
+  <paper-tabs selected="0" link class="bottom fit tab-color" self-end horizontal center layout>
 
     <paper-tab><%= link_to 'FORUM', forem.forums_path, :class => "p-tabs",
       "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
@@ -25,11 +22,15 @@
     <% if user_signed_in? %>
       </paper-tabs>
 
-      <div flex>
-        <!-- <%= link_to (image_tag "LPG.png"), :class => "logo"%> -->
-        <h2>Lamp Post Group</h2>
-      </div>
+      <div class="home-icon">
+        <%= link_to root_path do%>
+          <paper-icon-button class="huge" icon="home" title="huge"></paper-icon-button>
 
+      </div>
+      <div flex class="site-name">
+        <h2>The Post</h2>
+      </div>
+      <% end %>
       <span flex></span>
       <%= link_to(main_app.destroy_user_session_path, :method => :delete) do %>
         <img class=" avatar" src="<%= current_user.avatar %>" alt="">

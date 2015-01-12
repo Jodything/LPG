@@ -36,3 +36,10 @@ paper-tabs.tab-color paper-tab::shadow #ink {
 .avatar {
   border-radius: 50%;
 }
+
+div.home-icon paper-icon-button, div.site-name {
+  color: white;
+}
+div.home-icon paper-icon-button {
+  padding-top: 1em;
+}
