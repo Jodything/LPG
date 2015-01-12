@@ -11,12 +11,19 @@
     <paper-tab><%= link_to 'CONTACT US', main_app.new_contact_path,:class => "p-tabs",
     "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
 
-
-      <% Comfy::Cms::Site.first.pages.root.children.published.each do |page| %>
-      <paper-tab><%= link_to page.label.upcase, page.full_path, :class => "p-tabs",
-      "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
-      <% end %>
-
+    <paper-tab>
+    <paper-dropdown-menu label="LPG INFO">
+      <paper-dropdown class="dropdown">
+        <core-menu class="menu">
+            <paper-item>
+              <% Comfy::Cms::Site.first.pages.root.children.published.each do |page| %>
+              <%= link_to page.label.upcase, page.full_path %>
+              <% end %>
+            </paper-item>
+        </core-menu>
+      </paper-dropdown>
+    </paper-dropdown-menu>
+  </paper-tab>
 
 
     <% if user_signed_in? %>
@@ -25,12 +32,12 @@
       <div class="home-icon">
         <%= link_to root_path do%>
           <paper-icon-button class="huge" icon="home" title="huge"></paper-icon-button>
-
       </div>
       <div flex class="site-name">
         <h2>The Post</h2>
       </div>
       <% end %>
+
       <span flex></span>
       <%= link_to(main_app.destroy_user_session_path, :method => :delete) do %>
         <img class=" avatar" src="<%= current_user.avatar %>" alt="">
@@ -40,16 +47,15 @@
     <% else %>
       </paper-tabs>
 
-      <paper-menu-button>
-        <paper-icon-button icon="menu" noink></paper-icon-button>
-        <!-- <paper-dropdown class="dropdown">
-          <core-menu class="menu">
-            <template repeat="{{}}">
-              <paper-item>{{}}</paper-item>
-            </template>
-          </core-menu>
-        </paper-dropdown> -->
-      </paper-menu-button>
+        <div class="home-icon">
+          <%= link_to root_path do%>
+          <paper-icon-button class="huge" icon="home" title="huge"></paper-icon-button>
+        </div>
+        <div flex class="site-name">
+          <h2>The Post</h2>
+        </div>
+        <% end %>
+
 
         <span flex></span>
         <paper-icon-button class="" icon="account-circle"></paper-icon-button>

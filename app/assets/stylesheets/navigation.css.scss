@@ -9,6 +9,58 @@ $gold: #DABA55;
 $light-gold: #EAD9A1;
 $teal: #80cbc4;
 
+///
+html /deep/ paper-dropdown-menu {
+  box-sizing: border-box;
+  width: 170px;
+}
+
+html /deep/ core-menu {
+  box-sizing: border-box;
+  width: 170px;
+}
+
+paper-item {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+html /deep/ core-collapse {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+html /deep/ core-overlay {
+  border: 1px solid #ccc;
+  padding: 8px;
+  background: #fff;
+}
+
+.constrained-height {
+  height: 150px;
+}
+
+.colored {
+  color: #0f9d58;
+}
+
+.dropdown.colored::shadow #ripple,
+.dropdown.colored::shadow #background {
+  border: 1px solid #0f9d58;
+  background-color: #b7e1cd;
+}
+
+paper-dropdown-menu::shadow #label,
+paper-dropdown-menu::shadow #arrow {
+  color: $gold;
+}
+paper-dropdown-menu::shadow:host {
+  padding: none;
+  margin: none;
+  border-bottom: none;
+}
+////
 
 paper-tabs, core-toolbar {
   background-color: $mocha;
