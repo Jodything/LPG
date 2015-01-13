@@ -5,91 +5,78 @@
 $charcoal: #333;
 $grey: #eee;
 $mocha: #211d1e;
-$gold: #DABA55;
-$light-gold: #EAD9A1;
+$gold: #daba55;
+$light-gold: #ead9a1;
 $teal: #80cbc4;
 
 ///
 html /deep/ paper-dropdown-menu {
   box-sizing: border-box;
-  width: 170px;
-}
 
+}
 html /deep/ core-menu {
   box-sizing: border-box;
   width: 170px;
-}
+  text-align: center;
 
-paper-item {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
-
-html /deep/ core-collapse {
-  border: 1px solid #ccc;
-  padding: 8px;
-}
-
+// paper-item {
+//   overflow: hidden;
+//   white-space: nowrap;
+//   text-overflow: ellipsis;
+// }
 html /deep/ core-overlay {
   border: 1px solid #ccc;
   padding: 8px;
   background: #fff;
-}
 
-.constrained-height {
-  height: 150px;
 }
-
 .colored {
-  color: #0f9d58;
-}
+  color: purple;
 
+}
 .dropdown.colored::shadow #ripple,
 .dropdown.colored::shadow #background {
-  border: 1px solid #0f9d58;
-  background-color: #b7e1cd;
-}
+  border: 1px solid blue;
+  background-color: red;
 
+}
 paper-dropdown-menu::shadow #label,
 paper-dropdown-menu::shadow #arrow {
   color: $gold;
 }
-paper-dropdown-menu::shadow:host {
-  padding: none;
-  margin: none;
-  border-bottom: none;
-}
 ////
 
-paper-tabs, core-toolbar {
+paper-tabs,
+core-toolbar {
   background-color: $mocha;
   color: #fff;
-  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
 
+}
 core-toolbar paper-tabs {
   box-shadow: none;
-}
 
+}
 .p-tabs {
   text-decoration: none;
   color: $gold;
-}
 
+}
 paper-tabs.tab-color::shadow #selectionBar {
   background-color: $teal;
-}
 
+}
 paper-tabs.tab-color paper-tab::shadow #ink {
   color: $light-gold;
-}
 
+}
 .avatar {
   border-radius: 50%;
-}
 
-div.home-icon paper-icon-button, div.site-name {
+}
+div.home-icon paper-icon-button,
+div.site-name {
   color: white;
 }
 div.home-icon paper-icon-button {

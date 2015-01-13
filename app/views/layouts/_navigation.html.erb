@@ -12,18 +12,18 @@
     "horizontal"=>"", "center-center"=>"", "layout"=>"" %></paper-tab>
 
     <paper-tab>
-    <paper-dropdown-menu label="LPG INFO">
-      <paper-dropdown class="dropdown">
-        <core-menu class="menu">
-            <paper-item>
-              <% Comfy::Cms::Site.first.pages.root.children.published.each do |page| %>
-              <%= link_to page.label.upcase, page.full_path %>
-              <% end %>
-            </paper-item>
-        </core-menu>
-      </paper-dropdown>
-    </paper-dropdown-menu>
-  </paper-tab>
+      <paper-dropdown-menu label="LPG INFO">
+        <paper-dropdown class="dropdown colored">
+          <core-menu class="menu">
+              <paper-item>
+                <% Comfy::Cms::Site.first.pages.root.children.published.each do |page| %>
+                <%= link_to page.label.upcase, page.full_path %>
+                <% end %>
+              </paper-item>
+          </core-menu>
+        </paper-dropdown>
+      </paper-dropdown-menu>
+    </paper-tab>
 
 
     <% if user_signed_in? %>
